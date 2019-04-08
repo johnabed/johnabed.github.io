@@ -83,7 +83,7 @@ h2{
 }
 p{
   text-align: justify;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .s-m{
@@ -92,8 +92,8 @@ p{
 }
 .s-m a{
   text-decoration: none;
-  font-size: 20px;
-  color: #333;
+  font-size: 28px;
+  color: #555555;
   padding: 0 10px;
   transition: .4s;
 }
