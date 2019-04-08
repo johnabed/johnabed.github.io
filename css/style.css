@@ -127,3 +127,8 @@ p{
 .s-m a:hover{
   color: turquoise;
 }
+
+.s-m a span {
+  font-family: "montserrat",sans-serif;
+  font-size: 16px;
+}
