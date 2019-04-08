@@ -4,7 +4,7 @@ body{
   background: turquoise;
 }
 .card{
-  width: 340px;
+  width: 450px;
   background: #f1f1f1;
   overflow: hidden;
   font-family: "montserrat",sans-serif;
@@ -21,7 +21,9 @@ body{
 }
 .top-section img{
   width: 100%;
+  filter: brightness(50%);
 }
+
 .menuicon{
   position: absolute;
   width: 22px;
@@ -32,11 +34,11 @@ body{
 .menuicon span{
   width: 100%;
   height: 3px;
-  background: #000;
+  background: #ffffff;
   position: relative;
   display: block;
   margin-bottom: 6px;
-  opacity: .5;
+  opacity: .7;
   transition: .4s;
 }
 .menuicon .s1{
@@ -52,7 +54,7 @@ body{
   position: absolute;
   bottom: 20px;
   left: 20px;
-  font-size: 40px;
+  font-size: 50px;
   font-weight: 900;
   opacity: .7;
   color: white;
@@ -74,7 +76,7 @@ h2{
 .border{
   width: 30px;
   height: 3px;
-  background: #778beb;
+  background: turquoise;
   position: absolute;
   left: 0;
   bottom: -6px;
@@ -96,5 +98,5 @@ p{
   transition: .4s;
 }
 .s-m a:hover{
-  color: #778beb;
+  color: turquoise;
 }
