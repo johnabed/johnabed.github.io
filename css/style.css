@@ -26,7 +26,9 @@ body {
 
 
 .card{
-  width: 450px;
+  height: auto;
+  width: 80%;
+  max-width: 400px;
   background: #f1f1f1;
   overflow: hidden;
   font-family: "montserrat",sans-serif;
@@ -45,17 +47,15 @@ body {
 }
 .top-section{
   position: relative;
-}
-.top-section img{
-  width: 100%;
-  filter: brightness(50%);
+  height: 80px;
+  background-color: turquoise;
 }
 
 .menuicon{
   position: absolute;
   width: 22px;
-  left: 20px;
-  top: 20px;
+  left: 15px;
+  top: 15px;
   cursor: pointer;
 }
 .menuicon span{
@@ -80,10 +80,9 @@ body {
 .name{
   position: absolute;
   bottom: 20px;
-  left: 20px;
-  font-size: 50px;
+  right: 20px;
+  font-size: 36px;
   font-weight: 900;
-  opacity: .7;
   color: white;
 }
 .name span{
