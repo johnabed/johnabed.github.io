@@ -1,38 +1,106 @@
-.App {
-  text-align: center;
+.card{
+  height: auto;
+  width: 80%;
+  max-width: 400px;
+  background: #f1f1f1;
+  overflow: hidden;
+  font-family: "montserrat",sans-serif;
+  box-shadow: 0 0 20px #00000070;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#drag {
+  position: absolute;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.middle{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.top-section{
+  position: relative;
+  height: 80px;
+  background-color: turquoise;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.menuicon{
+  position: absolute;
+  width: 22px;
+  left: 15px;
+  top: 15px;
+  cursor: pointer;
+}
+.menuicon span{
+  width: 100%;
+  height: 3px;
+  background: #ffffff;
+  position: relative;
+  display: block;
+  margin-bottom: 6px;
+  opacity: .7;
+  transition: .4s;
+}
+.menuicon .s1{
+  left: -5px;
+}
+.menuicon .s2{
+  left: 5px;
+}
+.menuicon:hover span{
+  left: 0;
+}
+.name{
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 36px;
+  font-weight: 900;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.name span{
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.info-section{
+  padding: 40px;
+  padding-top: 0;
+  color: #333;
+}
+h2{
+  position: relative;
+  font-size: 16px;
+}
+.border{
+  width: 30px;
+  height: 3px;
+  background: turquoise;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+}
+p{
+  text-align: justify;
+  font-size: 16px;
+}
+
+.s-m{
+  text-align: center;
+  margin-top: 20px;
+}
+.s-m a{
+  text-decoration: none;
+  font-size: 20px;
+  color: #555555;
+  padding: 0 10px;
+  transition: .4s;
+}
+.s-m a:hover{
+  color: turquoise;
+}
+
+.s-m a span {
+  font-family: "montserrat",sans-serif;
+  font-size: 16px;
 }
