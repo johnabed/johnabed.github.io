@@ -1,0 +1,2 @@
+.header,body{animation:Gradient 30s ease infinite;background:linear-gradient(270deg,#00ffcd,#faff70,#47cfff);background-size:600% 600%}.header{-webkit-background-clip:text;background-clip:text;color:#0000;text-transform:uppercase}.card{background:#f1f1f1;font-family:montserrat,sans-serif;min-width:350px}@keyframes Gradient{0%{background-position:0 50%}50%{background-position:100% 50%}to{background-position:0 50%}}
+/*# sourceMappingURL=main.6de99e22.css.map*/
