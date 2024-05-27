@@ -1,3 +1,4 @@
+import React from 'react';
 import { Box, Card } from "@material-ui/core";
 import "./App.css";
 
@@ -12,26 +13,26 @@ function App() {
     >
       <Card className="card" elevation={5}>
         <div>
-          <div class="top-section">
-            <div class="name">John Abed</div>
+          <div className="top-section">
+            <div className="name">John Abed</div>
           </div>
 
-          <div class="info-section">
+          <div className="info-section">
             <h2>
               about
-              <div class="border"></div>
+              <div className="border"></div>
             </h2>
             <p>Full-stack Software Developer</p>
-            <div class="s-m">
+            <div className="s-m">
               <span>
                 {" "}
-                <span class="fas fa-map-marker-alt"></span> Toronto, Ontario,
+                <span className="fas fa-map-marker-alt"></span> Toronto, Ontario,
                 Canada{" "}
               </span>
             </div>
             <h2>
               education
-              <div class="border"></div>
+              <div className="border"></div>
             </h2>
             <p>
               B.A. Honours Business Administration & B.Sc. Honours Computer
@@ -39,77 +40,86 @@ function App() {
             </p>
             <h2>
               connect
-              <div class="border"></div>
+              <div className="border"></div>
             </h2>
-            <div class="s-m">
+            <div className="s-m">
               <a
                 href="mailto:jabed.hba2019@ivey.ca"
                 target="_blank"
-                class="fas fa-envelope"
+                className="fas fa-envelope" rel="noreferrer"
+                aria-label='email'
               ></a>
               <a
                 href="https://www.linkedin.com/in/johnabed/"
                 target="_blank"
-                class="fab fa-linkedin"
+                className="fab fa-linkedin" rel="noreferrer"
+                aria-label='linkedin'
               ></a>
               <a
                 href="https://github.com/johnabed"
                 target="_blank"
-                class="fab fa-github"
+                className="fab fa-github" rel="noreferrer"
+                aria-label='github'
               ></a>
               <a
                 href="https://www.facebook.com/johnaabed"
                 target="_blank"
-                class="fab fa-facebook"
+                className="fab fa-facebook" rel="noreferrer"
+                aria-label='facebook'
               ></a>
               <a
                 href="https://www.instagram.com/johnabed/"
                 target="_blank"
-                class="fab fa-instagram"
+                className="fab fa-instagram" rel="noreferrer"
+                aria-label='instagram'
               ></a>
             </div>
             <h2>
               media
-              <div class="border"></div>
+              <div className="border"></div>
             </h2>
-            <div class="s-m">
+            <div className="s-m">
               <a
                 href="files/resume_johnabed.pdf"
                 target="_blank"
-                class="fas fa-file-alt"
+                className="fas fa-file-alt"
               >
                 {" "}
                 <span>Resume</span>{" "}
               </a>
-              <a href="gojohnnygo/" target="_blank" class="fas fa-gamepad">
+              <a href="gojohnnygo/" target="_blank" className="fas fa-gamepad">
                 {" "}
                 <span>Go Johnny Go!</span>{" "}
               </a>
             </div>
             <h2>
               projects
-              <div class="border"></div>
+              <div className="border"></div>
             </h2>
-            <div class="s-m">
+            <div className="s-m">
               <a
                 href="https://github.com/johnabed/task-manager-mean"
                 target="_blank"
-                class="fas fa-edit"
+                className="fas fa-edit" rel="noreferrer"
+                aria-label='task-manager-mean'
               ></a>
               <a
                 href="https://github.com/johnabed/Fitbyte"
                 target="_blank"
-                class="fas fa-running"
+                className="fas fa-running" rel="noreferrer"
+                aria-label='fitbyte'
               ></a>
               <a
                 href="https://github.com/johnabed/Ambience"
                 target="_blank"
-                class="fas fa-lightbulb"
+                className="fas fa-lightbulb" rel="noreferrer"
+                aria-label='ambience'
               ></a>
               <a
                 href="https://github.com/johnabed/gojohnnygo"
                 target="_blank"
-                class="fas fa-gamepad"
+                className="fas fa-gamepad" rel="noreferrer"
+                aria-label='gojohnnygo'
               ></a>
             </div>
           </div>
