@@ -1,7 +1,12 @@
 {
-  "name": "app",
-  "homepage": "http:/johnabed.github.io/johnabed.github.io",
-  "version": "0.1.0",
+  "name": "johnabed.github.io",
+  "version": "1.0.0",
+  "homepage": "https://johnabed.com",
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johnabed/johnabed.github.io/issues"
+  },
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.11.4",
@@ -27,7 +32,11 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -b master -d build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnabed/johnabed.github.io.git"
   },
   "eslintConfig": {
     "extends": [
