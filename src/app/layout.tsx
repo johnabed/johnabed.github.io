@@ -46,7 +46,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${poppins.className} bg-gradient-to-br from-[#00ffcd] to-[#faff70] text-gray-900 dark:text-white min-h-screen`}>
+      <body className={`${poppins.className} text-gray-900 min-h-screen`}>
         <Suspense fallback={
           <div className="fixed top-0 w-full h-16 bg-white/20 backdrop-blur-[8px] z-50" />
         }>

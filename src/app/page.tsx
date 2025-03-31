@@ -31,7 +31,7 @@ export default function Home() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-12"
+          className="text-xl md:text-2xl text-gray-600 mb-12"
         >
           Welcome to my 100% vibe coded website
         </motion.p>
