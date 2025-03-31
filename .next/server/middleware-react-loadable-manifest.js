@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST="{}";
+self.__REACT_LOADABLE_MANIFEST="{\"components/NavigationWrapper.tsx -> ./Navigation\":{\"id\":\"components/NavigationWrapper.tsx -> ./Navigation\",\"files\":[\"static/chunks/_app-pages-browser_src_components_Navigation_tsx.js\"]}}"

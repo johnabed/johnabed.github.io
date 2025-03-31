@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import type { Metadata, Viewport } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
-import Navigation from '@/components/Navigation';
+import NavigationWrapper from '@/components/NavigationWrapper';
 
 const poppins = Poppins({ 
   subsets: ["latin"],
@@ -46,9 +46,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${poppins.className} bg-gradient-to-br from-[#00ffcd] to-[#faff70] text-gray-900 dark:text-white`}>
-        <Navigation />
-        <main className="min-h-screen pt-16">
+      <body className={`${poppins.className} bg-gradient-to-br from-[#00ffcd] to-[#faff70] text-gray-900 dark:text-white min-h-screen`}>
+        <Suspense fallback={
+          <div className="fixed top-0 w-full h-16 bg-white/20 backdrop-blur-[8px] z-50" />
+        }>
+          <NavigationWrapper />
+        </Suspense>
+        <main className="relative top-16">
           {children}
         </main>
       </body>
