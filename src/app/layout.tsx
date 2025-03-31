@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   title: "John Abed",
   description: "John Abed",
   applicationName: "John Abed",
-  metadataBase: new URL('https://johnabed.com'),
+  metadataBase: new URL('http://johnabed.com'),
   icons: {
     icon: [
       { url: '/favicon.ico' },
