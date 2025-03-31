@@ -35,8 +35,7 @@ export const metadata: Metadata = {
   },
   manifest: '/manifest.json',
   other: {
-    'apple-mobile-web-app-capable': 'yes',
-    'apple-mobile-web-app-status-bar-style': 'default',
+    'mobile-web-app-capable': 'yes',
   },
 };
 
