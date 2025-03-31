@@ -46,7 +46,7 @@ export default function Home() {
                 Go Johnny Go!
               </h2>
               <a
-                href="https://johnabed.github.io/gojohnnygo/"
+                href="/gojohnnygo/index.html"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group/button inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#00ffcd] to-[#faff70] hover:from-[#faff70] hover:to-[#47cfff] text-gray-900 transition-all duration-300 py-2 px-4 rounded-lg font-semibold text-base shadow-lg hover:shadow-[#00ffcd]/25 cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#00ffcd] focus:ring-offset-2 focus:ring-offset-gray-900"
