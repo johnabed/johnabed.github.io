@@ -44,9 +44,9 @@ export default function Home() {
         >
           <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
           
-          <div className="p-8">
-            <div className="flex items-center justify-between mb-3">
-              <h2 className="text-3xl font-bold text-white">
+          <div className="p-6 sm:p-8">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-3">
+              <h2 className="text-2xl sm:text-3xl font-bold text-white">
                 Go Johnny Go!
               </h2>
               <a
@@ -59,12 +59,12 @@ export default function Home() {
                 Play Now
               </a>
             </div>
-            <p className="text-gray-300 text-lg leading-relaxed">
-              Join Johnny B Goode on an adventure to recover the pieces of his 1914 Gibson L-1 Acoustic guitar that was stolen by Beelzebub
+            <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
+              Join Johnny B Goode on his adventure to recover the pieces of his 1914 Gibson L-1 Acoustic guitar that was stolen by Beelzebub
             </p>
           </div>
           
-          <div className="relative rounded-xl overflow-hidden mx-6 shadow-xl ring-1 ring-gray-700">
+          <div className="relative rounded-xl overflow-hidden mx-4 sm:mx-6 shadow-xl ring-1 ring-gray-700">
             <Image
               src="/gojohnnygo.gif"
               alt="Go Johnny Go Gameplay"
@@ -74,7 +74,7 @@ export default function Home() {
               priority
             />
           </div>
-          <div className="mx-6 py-6"></div>
+          <div className="mx-4 sm:mx-6 py-4 sm:py-6"></div>
         </motion.div>
       </motion.div>
     </div>
