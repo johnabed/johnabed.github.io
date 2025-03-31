@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST='{"components/NavigationWrapper.tsx -> ./Navigation":{"id":5506,"files":["static/chunks/ee560e2c.0e933b66c24b61aa.js","static/chunks/943-3e41b20f93d91fa8.js","static/chunks/275.af1ef7681aeb25a3.js"]}}';
+self.__REACT_LOADABLE_MANIFEST='{"components/NavigationWrapper.tsx -> ./Navigation":{"id":5506,"files":["static/chunks/ee560e2c.0e933b66c24b61aa.js","static/chunks/943-407043e905346b47.js","static/chunks/275.af1ef7681aeb25a3.js"]}}';
