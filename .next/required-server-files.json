@@ -97,7 +97,7 @@
         "transform": "lodash/{{member}}"
       }
     },
-    "outputFileTracingRoot": "/Users/johnabed/johnabed.github.io/app",
+    "outputFileTracingRoot": "/Users/johnabed/johnabed.github.io",
     "experimental": {
       "allowedDevOrigins": [],
       "nodeMiddleware": false,
@@ -176,7 +176,7 @@
       "forceSwcTransforms": false,
       "largePageDataBytes": 128000,
       "turbo": {
-        "root": "/Users/johnabed/johnabed.github.io/app"
+        "root": "/Users/johnabed/johnabed.github.io"
       },
       "typedRoutes": false,
       "typedEnv": false,
@@ -282,7 +282,7 @@
     "bundlePagesRouterDependencies": false,
     "configFileName": "next.config.js"
   },
-  "appDir": "/Users/johnabed/johnabed.github.io/app",
+  "appDir": "/Users/johnabed/johnabed.github.io",
   "relativeAppDir": "",
   "files": [
     ".next/routes-manifest.json",
