@@ -52,7 +52,7 @@ export default function RootLayout({
         }>
           <NavigationWrapper />
         </Suspense>
-        <main className="relative top-16">
+        <main className="relative top-20">
           {children}
         </main>
       </body>
