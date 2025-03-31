@@ -4,9 +4,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  // Keep paths simple for GitHub Pages with custom domain
   basePath: '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? 'https://johnabed.com' : '',
-  // Ensure the app works properly with custom domain
   trailingSlash: true,
 };
 
