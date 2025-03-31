@@ -1,5 +1,5 @@
 import React from 'react';
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navigation from '@/components/Navigation';
@@ -8,6 +8,12 @@ const poppins = Poppins({
   subsets: ["latin"],
   weight: ['400', '600', '700', '800'],
 });
+
+export const viewport: Viewport = {
+  themeColor: '#000000',
+  width: 'device-width',
+  initialScale: 1,
+};
 
 export const metadata: Metadata = {
   title: "John Abed",
@@ -28,8 +34,6 @@ export const metadata: Metadata = {
     ],
   },
   manifest: '/manifest.json',
-  themeColor: '#000000',
-  viewport: 'width=device-width, initial-scale=1',
   other: {
     'apple-mobile-web-app-capable': 'yes',
     'apple-mobile-web-app-status-bar-style': 'default',
