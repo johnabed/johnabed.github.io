@@ -15,7 +15,6 @@ import {
 import { useState, useCallback, useEffect, useRef, useMemo } from 'react';
 import styles from './page.module.css';
 import { ExpandLess, ExpandMore } from '@mui/icons-material';
-import { useRouter, useSearchParams } from 'next/navigation';
 
 // Function to normalize text by removing diacritics
 const normalizeText = (text: string): string => {
