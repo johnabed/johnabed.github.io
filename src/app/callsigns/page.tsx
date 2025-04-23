@@ -25,17 +25,12 @@ const normalizeText = (text: string): string => {
 type ViewMode = 'grid' | 'grouped';
 
 export default function Home() {
-  const router = useRouter();
-  const searchParams = useSearchParams();
   const [sliderValue, setSliderValue] = useState(20);
   const [columnsCount, setColumnsCount] = useState(20);
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
   const [inputValue, setInputValue] = useState('');
   const [searchQuery, setSearchQuery] = useState('');
-  const [viewMode, setViewMode] = useState<ViewMode>(() => {
-    const view = searchParams.get('view');
-    return view === 'grouped' ? 'grouped' : 'grid';
-  });
+  const [viewMode, setViewMode] = useState<ViewMode>('grid');
   const [expandedGroups, setExpandedGroups] = useState<Record<string, boolean>>({});
   const gridRef = useRef<HTMLDivElement>(null);
 
@@ -106,7 +101,6 @@ export default function Home() {
   const handleViewModeChange = (_event: React.MouseEvent<HTMLElement>, newViewMode: ViewMode) => {
     if (newViewMode !== null) {
       setViewMode(newViewMode);
-      router.push(`/callsigns?view=${newViewMode}`);
     }
   };
 
