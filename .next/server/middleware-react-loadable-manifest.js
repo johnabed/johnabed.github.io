@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST="{}"
+self.__REACT_LOADABLE_MANIFEST='{"components/NavigationWrapper.tsx -> ./Navigation":{"id":5506,"files":["static/chunks/8e1d74a4.a702f6e8ec6da3aa.js","static/chunks/766-fb1030cde21ce0da.js","static/chunks/470-70d0a289d703f4e4.js","static/chunks/275.9667098dd4c85c7e.js"]}}';
