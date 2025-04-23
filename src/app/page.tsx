@@ -26,7 +26,7 @@ export default function Home() {
         >
           Hi, I'm <span className="name-outline">John Abed</span>
         </motion.h1>
-        
+
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -43,12 +43,10 @@ export default function Home() {
           className="group relative bg-gradient-to-br from-gray-900 to-black rounded-2xl overflow-hidden shadow-2xl max-w-2xl mx-auto border border-gray-800"
         >
           <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-          
+
           <div className="p-6 sm:p-8">
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-3">
-              <h2 className="text-2xl sm:text-3xl font-bold text-white">
-                Go Johnny Go!
-              </h2>
+              <h2 className="text-2xl sm:text-3xl font-bold text-white">Go Johnny Go!</h2>
               <a
                 href="/gojohnnygo/index.html"
                 target="_blank"
@@ -60,10 +58,11 @@ export default function Home() {
               </a>
             </div>
             <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
-              Join Johnny B Goode on his adventure to recover the pieces of his 1914 Gibson L-1 Acoustic guitar that was stolen by Beelzebub
+              Join Johnny B Goode on his adventure to recover the pieces of his 1914 Gibson L-1
+              Acoustic guitar that was stolen by Beelzebub
             </p>
           </div>
-          
+
           <div className="relative rounded-xl overflow-hidden mx-4 sm:mx-6 shadow-xl ring-1 ring-gray-700">
             <Image
               src="/gojohnnygo.gif"
@@ -79,4 +78,4 @@ export default function Home() {
       </motion.div>
     </div>
   );
-} 
+}

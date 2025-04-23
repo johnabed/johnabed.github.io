@@ -9,4 +9,4 @@ const nextConfig = {
   trailingSlash: true,
 };
 
-export default nextConfig; 
+export default nextConfig;
