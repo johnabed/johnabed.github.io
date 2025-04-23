@@ -1,4 +1,4 @@
-export type TCallsignRecord = {
+type TCallsignRecord = {
   callsign: string;
   assignedDate: string;
 };

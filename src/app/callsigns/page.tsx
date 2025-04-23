@@ -1,21 +1,10 @@
 'use client';
 
-import { callsigns, TCallsignRecord } from './callsigns';
+import { callsigns } from './callsigns';
 import Image from 'next/image';
-import {
-  Tooltip,
-  Slider,
-  TextField,
-  ToggleButton,
-  ToggleButtonGroup,
-  Button,
-  IconButton,
-  Collapse,
-} from '@mui/material';
+import { Tooltip, Slider, TextField, ToggleButton, ToggleButtonGroup } from '@mui/material';
 import { useState, useCallback, useEffect, useRef, useMemo } from 'react';
 import styles from './page.module.css';
-import { ExpandLess, ExpandMore } from '@mui/icons-material';
-import { useRouter, useSearchParams } from 'next/navigation';
 
 // Function to normalize text by removing diacritics
 const normalizeText = (text: string): string => {
@@ -25,18 +14,12 @@ const normalizeText = (text: string): string => {
 type ViewMode = 'grid' | 'grouped';
 
 export default function Home() {
-  const router = useRouter();
-  const searchParams = useSearchParams();
   const [sliderValue, setSliderValue] = useState(20);
   const [columnsCount, setColumnsCount] = useState(20);
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
   const [inputValue, setInputValue] = useState('');
   const [searchQuery, setSearchQuery] = useState('');
-  const [viewMode, setViewMode] = useState<ViewMode>(() => {
-    const view = searchParams.get('view');
-    return view === 'grouped' ? 'grouped' : 'grid';
-  });
-  const [expandedGroups, setExpandedGroups] = useState<Record<string, boolean>>({});
+  const [viewMode, setViewMode] = useState<ViewMode>('grid');
   const gridRef = useRef<HTMLDivElement>(null);
 
   // Debounce the search
@@ -98,35 +81,14 @@ export default function Home() {
     setInputValue(event.target.value);
   };
 
-  const handleCallsignClick = (callsign: TCallsignRecord) => {
-    const index = filteredCallsigns.findIndex(c => c.callsign === callsign.callsign);
+  const handleCallsignClick = (index: number) => {
     setExpandedIndex(index);
   };
 
   const handleViewModeChange = (_event: React.MouseEvent<HTMLElement>, newViewMode: ViewMode) => {
     if (newViewMode !== null) {
       setViewMode(newViewMode);
-      router.push(`/callsigns?view=${newViewMode}`);
     }
-  };
-
-  const handleGroupToggle = (date: string) => {
-    setExpandedGroups(prev => ({
-      ...prev,
-      [date]: !prev[date],
-    }));
-  };
-
-  const handleExpandAll = () => {
-    const allExpanded: Record<string, boolean> = {};
-    groupedCallsigns.forEach(({ date }) => {
-      allExpanded[date] = true;
-    });
-    setExpandedGroups(allExpanded);
-  };
-
-  const handleCollapseAll = () => {
-    setExpandedGroups({});
   };
 
   const renderCallsignGrid = (callsigns: typeof filteredCallsigns) => (
@@ -139,7 +101,7 @@ export default function Home() {
     >
       {callsigns.map((callsign, index) => (
         <Tooltip key={index} title={callsign.callsign} arrow placement="top">
-          <div className={styles.gridItem} onClick={() => handleCallsignClick(callsign)}>
+          <div className={styles.gridItem} onClick={() => handleCallsignClick(index)}>
             <div className={styles.imageWrapper}>
               <Image
                 src={`/callsigns/${callsign.callsign}.png`}
@@ -193,16 +155,6 @@ export default function Home() {
               Grouped
             </ToggleButton>
           </ToggleButtonGroup>
-          {viewMode === 'grouped' && (
-            <div className={styles.groupControls}>
-              <Button onClick={handleExpandAll} size="small">
-                Expand All
-              </Button>
-              <Button onClick={handleCollapseAll} size="small">
-                Collapse All
-              </Button>
-            </div>
-          )}
         </div>
       </div>
       <div className={styles.gridContainer} ref={gridRef}>
@@ -212,13 +164,8 @@ export default function Home() {
           <div className={styles.groupedView}>
             {groupedCallsigns.map(({ date, callsigns }) => (
               <div key={date} className={styles.dateGroup}>
-                <div className={styles.dateHeader} onClick={() => handleGroupToggle(date)}>
-                  <h2>{date}</h2>
-                  <IconButton size="small">
-                    {expandedGroups[date] ? <ExpandLess /> : <ExpandMore />}
-                  </IconButton>
-                </div>
-                <Collapse in={expandedGroups[date]}>{renderCallsignGrid(callsigns)}</Collapse>
+                <h2 className={styles.dateHeader}>{date}</h2>
+                {renderCallsignGrid(callsigns)}
               </div>
             ))}
           </div>
