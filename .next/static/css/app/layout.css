@@ -605,6 +605,9 @@ video {
 .top-20 {
   top: 5rem;
 }
+.top-16 {
+  top: 4rem;
+}
 .z-50 {
   z-index: 50;
 }

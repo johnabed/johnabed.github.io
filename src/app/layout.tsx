@@ -1,11 +1,11 @@
 import React, { Suspense } from 'react';
-import type { Metadata, Viewport } from "next";
-import { Poppins } from "next/font/google";
-import "./globals.css";
+import type { Metadata, Viewport } from 'next';
+import { Poppins } from 'next/font/google';
+import './globals.css';
 import NavigationWrapper from '@/components/NavigationWrapper';
 
-const poppins = Poppins({ 
-  subsets: ["latin"],
+const poppins = Poppins({
+  subsets: ['latin'],
   weight: ['400', '600', '700', '800'],
 });
 
@@ -16,9 +16,9 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "John Abed",
-  description: "John Abed",
-  applicationName: "John Abed",
+  title: 'John Abed',
+  description: 'John Abed',
+  applicationName: 'John Abed',
   metadataBase: new URL('https://johnabed.com'),
   icons: {
     icon: [
@@ -29,9 +29,7 @@ export const metadata: Metadata = {
       { url: '/favicon-128x128.png', sizes: '128x128', type: 'image/png' },
       { url: '/favicon-196x196.png', sizes: '196x196', type: 'image/png' },
     ],
-    apple: [
-      { url: '/favicon-196x196.png', sizes: '196x196', type: 'image/png' },
-    ],
+    apple: [{ url: '/favicon-196x196.png', sizes: '196x196', type: 'image/png' }],
   },
   manifest: '/manifest.json',
   other: {
@@ -47,15 +45,15 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${poppins.className} text-gray-900 min-h-screen`}>
-        <Suspense fallback={
-          <div className="fixed top-0 w-full h-16 bg-white/20 backdrop-blur-[8px] z-50" />
-        }>
+        <Suspense
+          fallback={
+            <div className="fixed top-0 w-full h-16 bg-white/20 backdrop-blur-[8px] z-50" />
+          }
+        >
           <NavigationWrapper />
         </Suspense>
-        <main className="relative top-20">
-          {children}
-        </main>
+        <main className="relative top-16">{children}</main>
       </body>
     </html>
   );
-} 
+}
