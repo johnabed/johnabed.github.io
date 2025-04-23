@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "next lint",
     "export": "next export",
-    "deploy": "rm -rf .next out && next build && touch out/.nojekyll && gh-pages -d out -b master --dotfiles"
+    "deploy": "rm -rf .next out && next build && touch out/.nojekyll && gh-pages -d out -b master --dotfiles",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -28,6 +30,7 @@
     "autoprefixer": "^10.4.14",
     "gh-pages": "^6.3.0",
     "postcss": "^8.4.31",
+    "prettier": "^3.5.3",
     "tailwindcss": "^3.3.0",
     "typescript": "5.8.2"
   }

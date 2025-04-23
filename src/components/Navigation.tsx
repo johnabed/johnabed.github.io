@@ -4,8 +4,6 @@ import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { FiGithub, FiLinkedin } from 'react-icons/fi';
-import { MdGamepad } from 'react-icons/md';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const Navigation = () => {
@@ -38,7 +36,7 @@ const Navigation = () => {
               John Abed
             </Link>
           </motion.div>
-          
+
           <div className="flex items-center space-x-4">
             {socialLinks.map((link, index) => (
               <motion.div
@@ -65,4 +63,4 @@ const Navigation = () => {
   );
 };
 
-export default Navigation; 
+export default Navigation;
